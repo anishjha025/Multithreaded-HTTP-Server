@@ -158,7 +158,7 @@ void *connection_handler(void *socket_desc)
         	   exit(0);
             }
 
-            bzero((char *) &ipc, sizeof(ipc));
+            memset((char *) &ipc,'\0',sizeof(ipc));
 
             ipc.sin_family=AF_INET;
         
